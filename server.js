@@ -112,7 +112,7 @@ const client = new Discord.Client()
 // const config = require('./config.json')
 const config = process.env.TOKEN
 const phrases = require('./phrases')
-console.log(config)
+
 client.on('message', message => {
   const command = message.content.toLowerCase();
 
@@ -122,6 +122,7 @@ client.on('message', message => {
 
   if (command.includes('miyagid')) {
     message.channel.send(phrases[Math.floor(Math.random() * phrases.length)])
+    console.log(config)
   }
 });
 
