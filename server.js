@@ -109,7 +109,8 @@ console.log('Server running on http://%s:%s', ip, port);
 
 const Discord = require('discord.js')
 const client = new Discord.Client()
-const config = require('./config.json')
+// const config = require('./config.json')
+const config = process.env.TOKEN
 const phrases = require('./phrases')
 
 client.on('message', message => {
